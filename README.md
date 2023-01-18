@@ -20,3 +20,5 @@ The database will contain:
 1. Patient address
 2. Patient Gender
 3. Medical Record Number 
+
+The variable name is `x_variable.`
