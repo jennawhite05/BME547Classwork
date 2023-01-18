@@ -1,1 +1,3 @@
-# BME547Classwork
+# Patient Health Database
+
+Author: Jenna White
