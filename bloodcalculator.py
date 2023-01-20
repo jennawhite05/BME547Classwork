@@ -14,32 +14,33 @@ def interface():
             HDL_driver()
         elif choice == "5":
             LDL_driver()
-        # elif choice == "7":
-        #     Cholesterol_driver()
+        elif choice == "7":
+            Cholesterol_driver()
     print("Program ending")
 
-# def Cholesterol_driver():
-#     Cholesterol_in = Cholesterol_input()
-#     Cholesterol_analy = Cholesterol_analysis(Cholesterol_in)
-#     Cholesterol_output(Cholesterol_in, Cholesterol_analy)
+def Cholesterol_driver():
+    Cholesterol_in = Cholesterol_input()
+    Cholesterol_analy = Cholesterol_analysis(Cholesterol_in)
+    Cholesterol_output(Cholesterol_in, Cholesterol_analy)
 
-# def Cholesterol_input():
-#     Cholesterol_value = input("Enter the Total Cholesterol result:")
-#     Cholesterol_value = int(Cholesterol_value)
-#     return Cholesterol_value
+def Cholesterol_input():
+    Cholesterol_value = input("Enter the Total Cholesterol result:")
+    Cholesterol_value = int(Cholesterol_value)
+    return Cholesterol_value
 
-# def Cholesterol_analysis(Cholesterol_int):
-#     if Cholesterol_int < 200:
-#         answer = "Normal"
-#     elif 200 <= Cholesterol_int <=239:
-#         answer = "Borderline High"
-#     else:
-#         answer = "High"
-#     return answer
+def Cholesterol_analysis(Cholesterol_int):
+    if Cholesterol_int < 200:
+        answer = "Normal"
+    elif 200 <= Cholesterol_int <=239:
+        answer = "Borderline High"
+    else:
+        answer = "High"
+    return answer
 
-# def Cholesterol_output(Cholesterol_value, Cholesterol_analy):
-#     print("The Total Cholesterol result of {} is considered {}".format(Cholesterol_value, Cholesterol_analy))
-#     return
+def Cholesterol_output(Cholesterol_value, Cholesterol_analy):
+    print("The Total Cholesterol result of {} is considered {}".format(Cholesterol_value, Cholesterol_analy))
+    return
+
 
 def LDL_driver():
     LDL_in = LDL_input()
