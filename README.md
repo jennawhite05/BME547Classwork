@@ -10,8 +10,9 @@ This is written in Python.
 ## Specifications
 The database will contain:
 * Patient Name
-* Patient Age
+* Patient Medical Records
 * Patient Bloodtype
+* Patient Test Results
     - A+
     - A-
     - B+
