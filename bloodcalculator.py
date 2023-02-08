@@ -34,7 +34,7 @@ def Cholesterol_input():
 def Cholesterol_analysis(Cholesterol_int):
     if Cholesterol_int < 200:
         answer = "Normal"
-    elif 200 <= Cholesterol_int <=239:
+    elif 200 <= Cholesterol_int <= 239:
         answer = "Borderline High"
     else:
         answer = "High"
@@ -42,7 +42,8 @@ def Cholesterol_analysis(Cholesterol_int):
 
 
 def Cholesterol_output(Cholesterol_value, Cholesterol_analy):
-    print("The Total Cholesterol result of {} is considered {}".format(Cholesterol_value, Cholesterol_analy))
+    print("The Total Cholesterol result of {} is considered {}"
+          .format(Cholesterol_value, Cholesterol_analy))
     return
 
 
@@ -104,4 +105,3 @@ def HDL_output(HDL_value, HDL_analy):
 
 if __name__ == "__main__":
     interface()
-interface()
