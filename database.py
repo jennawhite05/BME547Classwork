@@ -15,6 +15,8 @@ def main_driver():
     print(db)
     full_name = get_full_name(db[1])
     print(full_name)
+    age_class = minor_or_adult(db[1])
+    age_class_output(full_name, age_class)
     print_database(db)
     add_test_to_patient(db, 1, "HDL", 120)
     add_test_to_patient(db, 2, "LDL", 99)
@@ -78,6 +80,22 @@ def get_test_result(db, mrn, test_name):
     patient = get_patient_entry(db, mrn)
     test_result = get_test_value(patient['Tests'], test_name)
     return test_result
+
+
+def minor_or_adult(patient):
+    age = patient['Patient Age']
+    name = get_full_name(patient)
+    if age >= 18:
+        return "adult"
+    else:
+        return "minor"
+
+
+def age_class_output(name, ageclass):
+    if ageclass == 'adult':
+        print('{} is an adult'.format(name))
+    if ageclass == 'minor':
+        print('{} is a minor'.format(name))
 
 
 if __name__ == "__main__":
