@@ -1,6 +1,9 @@
 def create_patient_entry(first_name, last_name, patient_mrn, patient_age):
     # new_patient = [patient_name, patient_mrn, patient_age, []]
-    new_patient = {"First Name": first_name, "Last Name": last_name,  "Patient MRN": patient_mrn, "Patient Age": patient_age, "Tests": [] }
+    new_patient = {"First Name": first_name,
+                   "Last Name": last_name,
+                   "Patient MRN": patient_mrn,
+                   "Patient Age": patient_age, "Tests": []}
     return new_patient
 
 
@@ -8,7 +11,7 @@ def main_driver():
     db = {}
     db[1] = (create_patient_entry("Ann", "Ables", 1, 34))
     db[2] = (create_patient_entry("Bob", "Boyles", 2, 45))
-    db[3] =(create_patient_entry("Chris", "Chou", 3, 52))
+    db[3] = (create_patient_entry("Chris", "Chou", 3, 52))
     print(db)
     full_name = get_full_name(db[1])
     print(full_name)
@@ -23,9 +26,11 @@ def main_driver():
     testresult = get_test_result(db, 2, 'HDL')
     print(testresult)
 
+
 def get_full_name(patient):
     full_name = patient['First Name'] + " " + patient['Last Name']
     return full_name
+
 
 def print_database(db):
     for patient in db.values():
@@ -34,9 +39,11 @@ def print_database(db):
         age = patient['Patient Age']
         print("MRN: {}, Full Name: {}, Age: {}".format(mrn, full_name, age))
 
+
 def print_directory(db, room_numbers):
     for i, patient in enumerate(db.values()):
-        print("Patient {} is in room {}".format(get_full_name(patient), room_numbers[i]))
+        print("Patient {} is in room {}"
+              .format(get_full_name(patient), room_numbers[i]))
     # for patient, rn in zip(db, room_numbers):  # look into zip function
     #     print("Patient {} is in room {}".format(get_full_name(patient), rn))
 
