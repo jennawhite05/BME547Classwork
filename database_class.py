@@ -1,6 +1,7 @@
 class Patient:
 
-    def __init__(self, patient_first_name, patient_last_name, patient_mrn, patient_age):
+    def __init__(self, patient_first_name, patient_last_name,
+                 patient_mrn, patient_age):
         self.first_name = patient_first_name
         self.last_name = patient_last_name
         self.mrn = patient_mrn
@@ -17,6 +18,7 @@ class Patient:
         else:
             return False
 
+
 def main():
     new_patient = Patient("Ann", "Ables", 1, 34)
     second_patient = Patient("Bob", "Boyles", 2, 45)
@@ -30,6 +32,7 @@ def main():
     print(new_patient.last_name)
     print(new_patient.get_full_name())
     print(second_patient.first_name)
+
 
 if __name__ == "__main__":
     main()
