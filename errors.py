@@ -12,9 +12,11 @@ def convert_string(string):
     except ValueError:
         print('cannot convert to integer')
 
+
 def main():
     convert_string('2')
     convert_string('Hello')
+
 
 if __name__ == "__main__":
     main()
